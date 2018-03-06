@@ -1,5 +1,14 @@
 #!/bin/python3
 
+"""
+Problem:
+Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+
+url: https://www.hackerrank.com/challenges/diagonal-difference/problem
+"""
+
+
+
 import sys
 
 def diagonalDifference(a):
