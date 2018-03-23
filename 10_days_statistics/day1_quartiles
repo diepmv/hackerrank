@@ -1,0 +1,28 @@
+"""
+n = 5
+1 2 3 4 5
+sample input: 
+9
+3 7 8 5 12 14 21 13 18
+calculate Q2 => left halft, right haft
+Q1= median(left haft), Q3 = median(right haft)
+"""
+n=int(input())
+L = list(map(int, input().split()))
+L.sort()
+
+def median(n, L):
+    if n%2 == 0:
+        return (L[n//2 -1] + L[n//2])/2, n//2, n//2
+    else:
+        return L[n//2], n//2, n//2 + 1
+
+Q2, k1, k2 = median(n, L)
+L1 = L[:k1]
+L2 = L[k2:]
+
+Q1 = median(len(L1), L1)[0]
+Q3 = median(len(L2), L2)[0]
+print(int(Q1))
+print(int(Q2))
+print(int(Q3))
