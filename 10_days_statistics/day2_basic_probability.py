@@ -12,4 +12,4 @@ for i in range(dice_min, dice_max+1):
     if i+j <=9:
       count += 1
 
-print(float(count)/36)
+print("probability: ", '{0}/{1}'.format(count, 36))
