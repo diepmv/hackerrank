@@ -15,6 +15,8 @@ def factorial(n):
 def combination(a, b):
     return factorial(b)/(factorial(a)*factorial(b-a))
 
+
+
 boy, girl = 1.09, 1
 p_boy = 1.09/(1+1.09)
 p_girl = 1 - p_boy
@@ -22,4 +24,4 @@ p_girl = 1 - p_boy
 total = 0
 for i in range(3, 7):
     total += combination(i, 6)* (p_boy)**(i) * (p_girl)**(6-i)
-print(total)
+print(round(total, 3))
